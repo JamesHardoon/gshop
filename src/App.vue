@@ -9,11 +9,22 @@
 
 <script>
 import FooterGuide from './components/FooterGuide/FooterGuide.vue'
+import {reqFoodTypes} from './api'
 export default {
+  name: 'App',
   components: {
     FooterGuide
   },
-  name: 'App'
+  data () {
+    return {
+      
+    }
+  },
+  async mounted () {
+    const result = await reqFoodTypes()
+    console.log(result)
+  }
+  
 }
 </script>
 
